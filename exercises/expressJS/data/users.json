@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Ruoyu",
+        "age": 20,
+        "course": "NodeJS"
+    },
+    {
+        "id": 2,
+        "name": "Alice",
+        "age": 22,
+        "course": "MongoDB"
+    },
+    {
+        "id": 3,
+        "name": "Bob",
+        "age": 21,
+        "course": "ExpressJS"
+    }
+]

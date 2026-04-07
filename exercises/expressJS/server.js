@@ -1,34 +1,26 @@
 const express = require("express");
+const path = require("path");
+const logger = require("./middleware/logger");
+const usersRouter = require("./routes/users");
+
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(logger);
 
-// Home route
-app.get("/", (req, res) => {
-    res.send("Express server is running");
-});
+app.use(express.static(path.join(__dirname, "public")));
 
-// About route
 app.get("/about", (req, res) => {
     res.send("About page");
 });
 
-// Dynamic route
-app.get("/user/:name", (req, res) => {
-    res.send("User: " + req.params.name);
-});
+app.use("/api/users", usersRouter);
 
-// Query route
-app.get("/search", (req, res) => {
-    res.send("Query: " + req.query.q);
-});
-
-// 404 handler
 app.use((req, res) => {
     res.status(404).send("404 Not Found");
 });
 
-// Start server (改成3001)
 app.listen(3001, () => {
     console.log("Server running on http://localhost:3001");
 });
