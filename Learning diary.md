@@ -35,40 +35,32 @@ I also carefully reviewed the course instructions and evaluation criteria. The c
 
 25.3.2026
 
-I started learning the basics of Node.js and how JavaScript can be executed outside the browser environment.
-I wrote simple scripts using console.log and practiced running files using Node.js in the terminal. This helped me understand how backend code is executed and how to structure simple programs.
-I also explored Node.js modules such as the os module and learned how to import and use built-in functionalities using require. This gave me a better understanding of modular programming in Node.js.
-In addition, I created a basic HTTP server using the http module. I learned how to handle different routes and send responses to the browser. This was an important step in understanding how backend servers work.
+Today I focused on learning the fundamental modules of Node.js, including the built-in modules such as path, url, fs, and events.
+I explored how to work with file paths using the path module, including extracting file names, extensions, and constructing new paths. I also practiced parsing URLs and retrieving query parameters using the URL module, which helped me understand how Node.js handles request-related data.
+In addition, I worked with the file system module (fs) to create directories, write files, read file contents, and append new data to existing files. This allowed me to gain hands-on experience with basic file operations in Node.js.
+I also studied the EventEmitter module and implemented custom events. By emitting and listening to events, I understood how Node.js handles asynchronous event-driven programming.
+Overall, this session helped me build a solid understanding of Node.js core modules and how they are used in practical scenarios.
 
 
 26.3.2026
 
-I continued working with Node.js and focused on file system operations using the fs module.
-I learned how to create, read, and modify files programmatically. I wrote a script that creates a file, reads its content, and appends new data to it. This helped me understand how backend applications interact with the file system.
-At first, I did not see the expected output due to the execution order of the code. After adjusting the order of operations, I was able to correctly display the updated file content. This experience improved my understanding of program flow.
-Overall, this session helped me understand how Node.js can be used for handling data and performing backend tasks.
-
+Today I extended my knowledge of Node.js by creating a basic HTTP server without using any frameworks.
+I used the built-in http module to build a server that handles different routes, including the home page and an about page. I also implemented dynamic responses by handling query parameters and returning JSON data for API-like endpoints.
+During the process, I encountered an issue where the server could not start due to the port already being in use. After identifying the problem, I resolved it by changing the port number, which allowed the server to run successfully.
+This exercise helped me understand how low-level server logic works in Node.js, including request handling, routing, and response formatting. It also provided a deeper insight into how frameworks like Express simplify these processes.
 
 02.4.2026
 
-I started working with MongoDB and learned the basic concepts of databases in backend development.
-At first, I installed MongoDB and tried to start the database server. I encountered some issues with running the mongod command because the system could not recognize it. After checking the installation path, I was able to start the MongoDB server manually.
-I also learned how to install the correct MongoDB driver for Node.js using npm. Initially, I made a mistake in the package name, which caused problems when trying to use the database. After fixing the installation, I successfully connected Node.js to MongoDB.
-Finally, I wrote a script to test the connection and confirmed it by printing a message in the console. This helped me understand how backend applications establish connections with databases.
-
+Today I started working with MongoDB and focused on setting up the database environment and establishing a connection.
+Initially, I encountered issues when trying to run the MongoDB server, as the mongod command was not recognized. After investigating, I realized that the MongoDB executable path needed to be specified correctly. I resolved this by running mongod using the full path, which successfully started the database server.
+After the server was running, I used the MongoDB Node.js driver to connect to the local database. I created a connection script and verified that the connection was successful.
+This session helped me understand how MongoDB runs locally and how to establish a connection between Node.js and a database system.
 
 03.4.2026
 
-I continued working with MongoDB and focused on basic database operations.
-I practiced inserting data into a collection, querying data, updating existing records, and deleting documents. These operations helped me understand how data is managed in a database.
-I wrote separate scripts for each operation and ran them individually to test their functionality. At first, I was confused about why some outputs were not displayed, but I realized that each script runs independently and needs explicit console output.
-Through this process, I gained a better understanding of how backend applications interact with databases and how CRUD operations are implemented in practice.
+Today I continued working with MongoDB and focused on performing CRUD (Create, Read, Update, Delete) operations.
+I implemented scripts to insert multiple documents into a collection and verified the results by retrieving the data using find and findOne queries. I also practiced filtering data based on specific conditions.
+In addition, I updated existing documents using updateOne and removed data using deleteOne. Finally, I created a combined script that performs all CRUD operations in sequence, which helped me understand the full data lifecycle.
+This session provided practical experience with database operations and strengthened my understanding of how backend applications interact with data storage systems.
 
 
-07.4.2026
-
-Today I started learning Express.js and explored how to build a basic backend server using it.
-I created an Express application and learned how to define routes using different HTTP methods such as GET. I implemented several routes, including a home route, an about page, and dynamic routes using URL parameters. This helped me understand how Express simplifies server-side development compared to the native Node.js HTTP module.
-I also practiced handling query parameters and learned how to process different types of requests. In addition, I implemented a simple 404 handler to manage undefined routes, which improved the structure of the application.
-During the process, I encountered an issue where the server did not return the expected response. After checking the running processes, I realized that the port was already in use by a previously running server. I resolved this by changing the port number, which allowed the Express server to run correctly.
-Overall, this session helped me understand the basic structure of an Express application and how routing works in backend development.

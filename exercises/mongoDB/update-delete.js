@@ -4,26 +4,25 @@ const uri = "mongodb://127.0.0.1:27017";
 const client = new MongoClient(uri);
 
 async function run() {
-  try {
-    await client.connect();
+    try {
+        await client.connect();
 
-    const db = client.db("testdb");
-    const collection = db.collection("users");
+        const db = client.db("fullstack_course");
+        const collection = db.collection("students");
 
-    await collection.updateOne(
-      { name: "Ruoyu" },
-      { $set: { age: 21 } }
-    );
+        const updateResult = await collection.updateOne(
+            { name: "Ruoyu" },
+            { $set: { age: 21, course: "MongoDB" } }
+        );
+        console.log("Updated documents:", updateResult.modifiedCount);
 
-    console.log("Updated");
-
-    await collection.deleteOne({ name: "Ruoyu" });
-
-    console.log("Deleted");
-
-  } finally {
-    await client.close();
-  }
+        const deleteResult = await collection.deleteOne({ name: "Bob" });
+        console.log("Deleted documents:", deleteResult.deletedCount);
+    } catch (err) {
+        console.error("Update/Delete error:", err);
+    } finally {
+        await client.close();
+    }
 }
 
 run();
