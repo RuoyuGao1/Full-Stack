@@ -1,4 +1,6 @@
-console.log("Hello Node.js");
+const os = require("os");
 
-const name = "Ruoyu";
-console.log("My name is " + name);
+console.log("Node.js practice started");
+console.log("Platform:", os.platform());
+console.log("CPU cores:", os.cpus().length);
+console.log("Home directory:", os.homedir());
