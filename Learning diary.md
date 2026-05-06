@@ -107,3 +107,27 @@ I created a React project using Vite and built a simple interface with an input 
 While working on this part, I encountered some issues, such as function definition order and ESLint warnings related to useEffect. I fixed these problems by moving the fetch function inside useEffect and adjusting the code structure.
 After that, I implemented adding tasks, deleting tasks, and updating task status. These actions send requests to the backend API and update the database.
 At the end, I was able to see the tasks displayed on the page, and the data remained after refreshing the page.
+
+01.5.2025
+
+Today I started working on my final project for the full-stack module. I decided to build a simple message board using the MERN stack.
+First, I created a new project folder and separated it into backend and frontend directories. I initialized the backend using Node.js and installed the required dependencies such as Express, Mongoose, and CORS. Then I set up a basic Express server and confirmed that it could run correctly.
+After that, I connected the application to a local MongoDB database. Compared to MongoDB Atlas, using a local database was simpler and more stable for me. I created a Message model with fields for name and message. Based on this model, I implemented basic API routes, including GET, POST, and DELETE.
+During the process, I encountered some issues, such as errors with missing scripts in package.json and running commands in the wrong directory. After checking the file structure and fixing the scripts, I was able to start the server successfully.
+By the end of the day, the backend part of the project was working, and I could store and retrieve data from MongoDB.
+
+02.5.2026
+
+Today I focused on building the frontend using React.
+I created the frontend project using Vite and set up a basic React application. Then I installed axios to handle HTTP requests and started connecting the frontend with the backend API.
+I implemented the main features of the message board, including displaying messages, adding new messages, and deleting messages. I used useState to manage the input values and message data, and useEffect to fetch data from the backend.
+While working on this part, I encountered several issues. For example, I forgot to install axios in the frontend, which caused import errors. I also made mistakes with the project directory and ran commands in the wrong location. In addition, there were some warnings related to useEffect, which I fixed by adjusting the code structure.
+After solving these problems, I was able to see the messages displayed on the page and interact with them. The frontend and backend were successfully connected.
+
+08.5.2026
+
+Today I improved the user interface and added extra features to the project.
+First, I updated the CSS styles to make the interface cleaner and more user-friendly. I changed the layout to a centered card style and improved the appearance of buttons and input fields.
+Then I added a search function that allows users to filter messages by name or content. This feature was implemented on the frontend by filtering the message list based on user input.
+During testing, I also learned how to manage multiple terminals, since both the backend server and frontend development server need to run at the same time. I encountered issues with port conflicts, but I understood how Vite automatically switches to another port when needed.
+Overall, this project helped me understand how a full-stack application works from end to end. I practiced connecting the frontend and backend, handling data with MongoDB, and debugging real development issues. This experience improved both my technical skills and problem-solving ability.
