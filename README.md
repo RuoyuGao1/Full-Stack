@@ -10,6 +10,3 @@ This repository is created for my Full Stack Development course. It will include
 - Learning Diary
 - Project
 
-## Status
-
-Project setup in progress.
